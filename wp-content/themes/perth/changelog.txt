@@ -1,0 +1,14 @@
+Changelog
+
+1.06 - 26 April 2016 - fix for numeric inputs.
+
+1.05 - no info
+
+22 October 2015 - 1.04
+--------------------------------------
+- added exception for Buddypress in the smooth scroll code;
+- removed header text option;
+- updated demo links;
+- added option to disable the header overlay;
+- minified scripts file.
+
