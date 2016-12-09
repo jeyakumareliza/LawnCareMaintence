@@ -11,7 +11,6 @@ label, input, select {
 	font-size: 90%;
 }
 label {
-    float: left;
     width: 5em;
     text-align: left;
 }
