@@ -26,7 +26,7 @@ function html_form_code() {
 	echo '</p>';
     echo '<p>';
 	echo 'Phone Number <br/>';
-	echo '<input type="text" name="cf-number" placeholder="999-999-9999" pattern="\d{3}[\-]\d{3}[\-]\d{4}" value="' . ( isset( $_POST["cf-number"] ) ? esc_attr( $_POST["cf-number"] ) : '' ) . '" size="40" />';
+	echo '<input type="text" name="cf-number" value="' . ( isset( $_POST["cf-number"] ) ? esc_attr( $_POST["cf-number"] ) : '' ) . '" size="40" />';
 	echo '</p>';
 	echo '<p>';
 	echo 'E-mail <br/>';
