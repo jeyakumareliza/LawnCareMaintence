@@ -6,8 +6,11 @@ Plugin Name: Example Contact Form Plugin
 function html_form_code() {
 	echo '<form action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
 	echo '<p>';
+    echo '<p>'
+    echo 'All fields are required </br>'
+    echo '</p>'
 	echo 'Name <br/>';
-	echo '<input type="text" name="cf-name" pattern="[a-zA-Z0-9 ]+" value="' . ( isset( $_POST["cf-name"] ) ? esc_attr( $_POST["cf-name"] ) : '' ) . '" size="40" />';
+	echo '<input type="text" name="cf-name" pattern=" placeholder="required" value="' . ( isset( $_POST["cf-name"] ) ? esc_attr( $_POST["cf-name"] ) : '' ) . '" size="40" />';
 	echo '</p>';
 	echo '<p>';
 	echo 'Street <br/>';
@@ -23,7 +26,7 @@ function html_form_code() {
 	echo '</p>';
     echo '<p>';
 	echo 'Phone Number <br/>';
-	echo '<input type="text" name="cf-number" value="' . ( isset( $_POST["cf-number"] ) ? esc_attr( $_POST["cf-number"] ) : '' ) . '" size="40" />';
+	echo '<input type="text" name="cf-number" placeholder="999-999-9999" pattern="\d{3}[\-]\d{3}[\-]\d{4}" value="' . ( isset( $_POST["cf-number"] ) ? esc_attr( $_POST["cf-number"] ) : '' ) . '" size="40" />';
 	echo '</p>';
 	echo '<p>';
 	echo 'E-mail <br/>';
@@ -33,23 +36,25 @@ function html_form_code() {
 	echo 'Type of Property <br/>';
     echo '</p>';
     echo '<p>';
-    echo 'Residential';
-	echo '<input type="radio" name="cf-res">' . ( isset( $_POST["cf-res"] ) ? esc_attr( $_POST["cf-res"] ) : '' ) . '" size="40" />';
+    echo '  Residential';
+	echo '<input type="radio" name="cf-res">' . ( isset( $_POST["cf-res"] ) ? esc_attr( $_POST["cf-res"] ) : '' ) . '"/>';
     echo '</p>';
     echo '<p>';
-    echo 'Commercial';
-    echo '<input type="radio" name="cf-com">' . ( isset( $_POST["cf-com"] ) ? esc_attr( $_POST["cf-com"] ) : '' ) . '" size="40" />';
+    echo '  Commercial';
+    echo '<input type="radio" name="cf-com">' . ( isset( $_POST["cf-com"] ) ? esc_attr( $_POST["cf-com"] ) : '' ) . '"/>';
 	echo '</p>';
     echo '<p>';
 	echo 'Size of Property <br/>';
-	echo'<input type="text" name="cf-property">' . ( isset( $_POST["cf-property"] ) ? esc_attr( $_POST["cf-property"] ) : '' ) . '" size="40" />';
+	echo'<input type="text" name="cf-property">' . ( isset( $_POST["cf-property"] ) ? esc_attr( $_POST["cf-property"] ) : '' ) . '" />';
 	echo '</p>';
     echo '<p>';
 	echo 'Service Required <br/>';
 	echo '<textarea rows="10" cols="35" name="cf-message">' . ( isset( $_POST["cf-message"] ) ? esc_attr( $_POST["cf-message"] ) : '' ) . '</textarea>';
 	echo '</p>';
 	echo '<p><input type="submit" name="cf-submitted" value="Send"></p>';
-	echo '</form>';
+    echo'<p>';
+    echo '<input type="reset" id="reset" value="Reset Fields"><br></p>';
+	echo '</<form>';
 }
 
 function deliver_mail() {
@@ -76,7 +81,7 @@ function deliver_mail() {
 		$headers = "From: $name <$email>" . "\r\n";
 
 		// If email has been process for sending, display a success message
-		if ( wp_mail( $to, $message, $headers, $number ) ) {
+		if ( wp_mail( $to, $message, $headers) ) {
 			echo '<div>';
 			echo '<p>Thanks for contacting me, expect a response soon.</p>';
 			echo '</div>';
