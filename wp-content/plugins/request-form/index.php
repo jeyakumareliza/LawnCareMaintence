@@ -45,7 +45,7 @@ function html_form_code() {
 	echo '<textarea rows="5" cols="35" name="cf-message">' . ( isset( $_POST["cf-message"] ) ? esc_attr( $_POST["cf-message"] ) : '' ) . '</textarea>';
 	echo '</fieldset>';
 	echo '<fieldset id="buttons">';
-    echo '<label>&nbsp;</label>'
+    echo '<label>&nbsp;</label>';
     echo '<input type="submit" id="send" name="cf-submitted" value="Send">';
     echo '<input type="reset" id="reset" value="Reset Fields"></fieldset>';
 	echo '</<form>';
