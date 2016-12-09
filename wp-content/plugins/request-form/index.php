@@ -3,7 +3,6 @@
 Plugin Name: Example Contact Form Plugin
 */
 function html_form_code() {
-    echo '<link rel="stylesheet" type="text/css" href="style.css"></head>';
 	echo '<form action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
     echo '<fieldset>';
 	echo '<label for="firstName">First Name </label>';
@@ -24,7 +23,7 @@ function html_form_code() {
     echo '<fieldset>';
 	echo '<label for="cf-number">Phone Number <br/></label>';
 	echo '<input type="text" name="cf-number" value="' . ( isset( $_POST["cf-number"] ) ? esc_attr( $_POST["cf-number"] ) : '' ) . '" size="40" />';
-	echo '/fieldset>';
+	echo '</fieldset>';
 	echo '<fieldset>';
 	echo '<label for="cf-email">E-mail <br/></label>';
 	echo '<input type="e-mail" name="cf-email" pattern="[a-zA-Z ]+" value="' . ( isset( $_POST["cf-email"] ) ? esc_attr( $_POST["cf-email"] ) : '' ) . '" size="40" />';
@@ -93,5 +92,8 @@ function cf_shortcode() {
 }
 
 add_shortcode( 'sitepoint_contact_form', 'cf_shortcode' );
+
+wp_register_style('your_css_and_js', plugins_url('styles.css', __FILE__));
+wp_enqueue_style('your_css_and_js')
 
 ?>
