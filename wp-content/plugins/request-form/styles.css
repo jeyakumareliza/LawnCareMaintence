@@ -9,11 +9,16 @@ legend {
 }
 label, input, select {
 	font-size: 90%;
+      margin-left: 1px;
+    margin-right: 3px;
+    margin-bottom: 15px;
+    margin-top:15px;
 }
 label {
     width: 5em;
     text-align: left;
 }
+
 input, select {
     margin-left: 1px;
     margin-right: 3px;

@@ -7,7 +7,7 @@ function html_form_code() {
     echo '<fieldset>';
 	echo '<label for="firstName">First Name </label>';
 	echo '<input type="text" name="firstName" value="' . ( isset( $_POST["firstName"] ) ? esc_attr( $_POST["firstName"] ) : '' ) . '" size="30" />';
-    echo '<label for="lastName"> Last Name</label>';
+    echo '<label for="lastName">  Last Name </label>';
 	echo '<input type="text" name="lastName" value="' . ( isset( $_POST["lastName"] ) ? esc_attr( $_POST["lastName"] ) : '' ) . '" size="30" />';
     echo '</fieldset>';
     echo '<fieldset>';
@@ -17,7 +17,7 @@ function html_form_code() {
     echo '<fieldset>';
 	echo '<label for="cf-city">City </label>';
 	echo '<input type="text" name="cf-city" value="' . ( isset( $_POST["cf-city"] ) ? esc_attr( $_POST["cf-city"] ) : '' ) . '" size="40" />';
-	echo '<label for="cf-city"> Postal Code </label>';
+	echo '<label for="cf-city">  Postal Code </label>';
 	echo '<input type="text" name="cf-postal" value="' . ( isset( $_POST["cf-postal"] ) ? esc_attr( $_POST["cf-postal"] ) : '' ) . '" size="20" />';
 	echo '</fieldset>';
     echo '<fieldset>';
