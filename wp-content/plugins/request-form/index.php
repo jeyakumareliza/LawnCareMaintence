@@ -40,10 +40,11 @@ function html_form_code() {
 	echo'<input type="text" name="cf-property">' . ( isset( $_POST["cf-property"] ) ? esc_attr( $_POST["cf-property"] ) : '' );
 	echo '</fieldset>';
     echo '<fieldset>';
+    echo '<input type="submit" name="cf-submitted" value="Send">';
 	echo '<label for="cf-message">Service Required <br/></label>';
 	echo '<textarea rows="10" cols="35" name="cf-message">' . ( isset( $_POST["cf-message"] ) ? esc_attr( $_POST["cf-message"] ) : '' ) . '</textarea>';
 	echo '</fieldset>';
-	echo '<fieldset>';'<input type="submit" name="cf-submitted" value="Send">';
+	echo '<fieldset>';
     echo '<input type="reset" id="reset" value="Reset Fields"></fieldset>';
 	echo '</<form>';
 }
