@@ -28,7 +28,7 @@ function html_form_code() {
 	echo '<label for="cf-email">E-mail <br/></label>';
 	echo '<input type="e-mail" name="cf-email" pattern="[a-zA-Z ]+" value="' . ( isset( $_POST["cf-email"] ) ? esc_attr( $_POST["cf-email"] ) : '' ) . '" size="40" />';
 	echo '</fieldset>';
-	echo '<fieldset>';
+	echo '<fieldset id="radio">';
 	echo '<legend>Type of Property</legend>';
 	echo '<input type="radio" name="cf-res" id="cf-res">' . ( isset( $_POST["cf-res"] ) ? esc_attr( $_POST["cf-res"] ) : '' );
     echo '<label for="cf-res">Residential </label>';
