@@ -33,7 +33,7 @@ function html_form_code() {
 	echo '<input type="radio" name="cf-res" id="cf-res">' . ( isset( $_POST["cf-res"] ) ? esc_attr( $_POST["cf-res"] ) : '' );
     echo '<label for="cf-res">Residential </label>';
     echo '<input type="radio" name="cf-com" id="cf-com">' . ( isset( $_POST["cf-com"] ) ? esc_attr( $_POST["cf-com"] ) : '' );
-    echo '<label for="cf-res">Commercial </label>';
+    echo '<label for="cf-com">Commercial </label>';
 	echo '</fieldset>';
     echo '<fieldset>';
 	echo '<label for="cf-property">Property Size <br/></label>';
@@ -43,7 +43,7 @@ function html_form_code() {
 	echo '<label for="cf-message">Service Required <br/></label>';
 	echo '<textarea rows="10" cols="35" name="cf-message">' . ( isset( $_POST["cf-message"] ) ? esc_attr( $_POST["cf-message"] ) : '' ) . '</textarea>';
 	echo '</fieldset>';
-	echo '<fieldset>';'<input type="submit" name="cf-submitted" value="Send"></fieldset>';
+	echo '<fieldset>';'<input type="submit" name="cf-submitted" value="Send"></fieldset></br>';
     echo'<fieldset>';
     echo '<input type="reset" id="reset" value="Reset Fields"></fieldset>';
 	echo '</<form>';
