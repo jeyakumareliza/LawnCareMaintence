@@ -2,7 +2,7 @@
 /*
 Plugin Name: Example Contact Form Plugin
 */
-
+<link rel='stylesheet' type='text/css' href='style.php' />
 function html_form_code() {
 	echo '<form action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
     echo '<fieldset>';
