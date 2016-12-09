@@ -16,9 +16,9 @@ function html_form_code() {
 	echo '<input type="text" name="cf-street" value="' . ( isset( $_POST["cf-street"] ) ? esc_attr( $_POST["cf-street"] ) : '' ) . '" size="80" />';
 	echo '</fieldset>';
     echo '<fieldset>';
-	echo '<label for="cf-city">City</label>'
+	echo '<label for="cf-city">City</label>';
 	echo '<input type="text" name="cf-city" value="' . ( isset( $_POST["cf-city"] ) ? esc_attr( $_POST["cf-city"] ) : '' ) . '" size="40" />';
-	echo '<label for="cf-city">Postal Code</label>'
+	echo '<label for="cf-city">Postal Code</label>';
 	echo '<input type="text" name="cf-postal" value="' . ( isset( $_POST["cf-postal"] ) ? esc_attr( $_POST["cf-postal"] ) : '' ) . '" size="40" />';
 	echo '</fieldset>';
     echo '<fieldset>';
