@@ -3,7 +3,7 @@
 Plugin Name: Example Contact Form Plugin
 */
 function html_form_code() {
-    <link rel='stylesheet' type='text/css' href='style.php' />
+    echo '<link rel="stylesheet" type="text/css" href="style.css"></head>';
 	echo '<form action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
     echo '<fieldset>';
 	echo '<label for="firstName">First Name</label>';
