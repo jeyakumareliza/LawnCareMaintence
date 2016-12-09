@@ -5,9 +5,6 @@ Plugin Name: Example Contact Form Plugin
 
 function html_form_code() {
 	echo '<form action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
-	echo '<p>';
-    echo 'All fields are required </br>';
-    echo '</p>';
     echo '<p>';
 	echo 'Name <br/>';
 	echo '<input type="text" name="cf-name" pattern=" placeholder="required" value="' . ( isset( $_POST["cf-name"] ) ? esc_attr( $_POST["cf-name"] ) : '' ) . '" size="40" />';
