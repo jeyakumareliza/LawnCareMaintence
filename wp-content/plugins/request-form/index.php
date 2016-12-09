@@ -5,14 +5,12 @@ Plugin Name: Example Contact Form Plugin
 
 function html_form_code() {
 	echo '<form action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
-    echo '<p>';
-	echo 'Name <br/>';
-	echo '<input type="text" name="cf-name" pattern=" placeholder="required" value="' . ( isset( $_POST["cf-name"] ) ? esc_attr( $_POST["cf-name"] ) : '' ) . '" size="40" />';
-	echo '</p>';
-	echo '<p>';
-	echo 'Street <br/>';
+    echo '<fieldset>';
+	echo '<label for="cf-name">Name</label>';
+	echo '<input type="text" name="cf-name" required" value="' . ( isset( $_POST["cf-name"] ) ? esc_attr( $_POST["cf-name"] ) : '' ) . '" size="40" />';
+    echo '<label for="cf-street">Street</label>';
 	echo '<input type="text" name="cf-street" value="' . ( isset( $_POST["cf-street"] ) ? esc_attr( $_POST["cf-street"] ) : '' ) . '" size="40" />';
-	echo '</p>';
+	echo '</fieldset>';
     echo '<p>';
 	echo 'City <br/>';
 	echo '<input type="text" name="cf-city" value="' . ( isset( $_POST["cf-city"] ) ? esc_attr( $_POST["cf-city"] ) : '' ) . '" size="40" />';
@@ -34,15 +32,15 @@ function html_form_code() {
     echo '</p>';
     echo '<p>';
     echo '  Residential';
-	echo '<input type="radio" name="cf-res">' . ( isset( $_POST["cf-res"] ) ? esc_attr( $_POST["cf-res"] ) : '' ) . '"/>';
+	echo '<input type="radio" name="cf-res">' . ( isset( $_POST["cf-res"] ) ? esc_attr( $_POST["cf-res"] ) : '' );
     echo '</p>';
     echo '<p>';
     echo '  Commercial';
-    echo '<input type="radio" name="cf-com">' . ( isset( $_POST["cf-com"] ) ? esc_attr( $_POST["cf-com"] ) : '' ) . '"/>';
+    echo '<input type="radio" name="cf-com">' . ( isset( $_POST["cf-com"] ) ? esc_attr( $_POST["cf-com"] ) : '' );
 	echo '</p>';
     echo '<p>';
 	echo 'Size of Property <br/>';
-	echo'<input type="text" name="cf-property">' . ( isset( $_POST["cf-property"] ) ? esc_attr( $_POST["cf-property"] ) : '' ) . '" />';
+	echo'<input type="text" name="cf-property">' . ( isset( $_POST["cf-property"] ) ? esc_attr( $_POST["cf-property"] ) : '' );
 	echo '</p>';
     echo '<p>';
 	echo 'Service Required <br/>';
