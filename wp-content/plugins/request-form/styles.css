@@ -15,7 +15,7 @@ label {
     text-align: left;
 }
 input, select {
-    width: 15em;
+    width: 5em;
     margin-left: .5em;
     margin-bottom: .5em;
 }
@@ -46,9 +46,9 @@ br {
 }
 #buttons input {
 	width: 10em;
-    padding-top: 10px;
+    padding-top: 300px;
 }
 
 #submit {
-    padding-right: 5px;
+    padding-right: 100px;
 }
