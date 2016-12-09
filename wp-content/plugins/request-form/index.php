@@ -6,9 +6,9 @@ function html_form_code() {
 	echo '<form action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
     echo '<fieldset>';
 	echo '<label for="firstName">First Name </label>';
-	echo '<input type="text" name="firstName" value="' . ( isset( $_POST["firstName"] ) ? esc_attr( $_POST["firstName"] ) : '' ) . '" size="40" />';
-    echo '<label for="lastName">Last Name</label>';
-	echo '<input type="text" name="lastName" value="' . ( isset( $_POST["lastName"] ) ? esc_attr( $_POST["lastName"] ) : '' ) . '" size="40" />';
+	echo '<input type="text" name="firstName" value="' . ( isset( $_POST["firstName"] ) ? esc_attr( $_POST["firstName"] ) : '' ) . '" size="30" />';
+    echo '<label for="lastName"> Last Name</label>';
+	echo '<input type="text" name="lastName" value="' . ( isset( $_POST["lastName"] ) ? esc_attr( $_POST["lastName"] ) : '' ) . '" size="30" />';
     echo '</fieldset>';
     echo '<fieldset>';
     echo '<label for="cf-street">Street </label>';
@@ -17,12 +17,12 @@ function html_form_code() {
     echo '<fieldset>';
 	echo '<label for="cf-city">City </label>';
 	echo '<input type="text" name="cf-city" value="' . ( isset( $_POST["cf-city"] ) ? esc_attr( $_POST["cf-city"] ) : '' ) . '" size="40" />';
-	echo '<label for="cf-city">Postal Code </label>';
-	echo '<input type="text" name="cf-postal" value="' . ( isset( $_POST["cf-postal"] ) ? esc_attr( $_POST["cf-postal"] ) : '' ) . '" size="40" />';
+	echo '<label for="cf-city"> Postal Code </label>';
+	echo '<input type="text" name="cf-postal" value="' . ( isset( $_POST["cf-postal"] ) ? esc_attr( $_POST["cf-postal"] ) : '' ) . '" size="20" />';
 	echo '</fieldset>';
     echo '<fieldset>';
 	echo '<label for="cf-number">Phone Number </label>';
-	echo '<input type="text" name="cf-number" value="' . ( isset( $_POST["cf-number"] ) ? esc_attr( $_POST["cf-number"] ) : '' ) . '" size="40" />';
+	echo '<input type="text" name="cf-number" value="' . ( isset( $_POST["cf-number"] ) ? esc_attr( $_POST["cf-number"] ) : '' ) . '" size="20" />';
 	echo '</fieldset>';
 	echo '<fieldset>';
 	echo '<label for="cf-email">E-mail </label>';
@@ -37,7 +37,7 @@ function html_form_code() {
 	echo '</fieldset>';
     echo '<fieldset>';
 	echo '<label for="cf-property">Property Size </label>';
-	echo'<input type="text" name="cf-property">' . ( isset( $_POST["cf-property"] ) ? esc_attr( $_POST["cf-property"] ) : '' );
+	echo'<input type="text" name="cf-property">' . ( isset( $_POST["cf-property"] ) ? esc_attr( $_POST["cf-property"] ) : '' ) . '" size="30" />';
 	echo '</fieldset>';
     echo '<fieldset>';
 
