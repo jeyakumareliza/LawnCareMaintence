@@ -31,8 +31,12 @@ function html_form_code() {
 	echo '</p>';
 	echo '<p>';
 	echo 'Type of Property <br/>';
+    echo '</p>';
+    echo '<p>';
     echo 'Residential';
 	echo '<input type="radio" name="cf-res">' . ( isset( $_POST["cf-res"] ) ? esc_attr( $_POST["cf-res"] ) : '' ) . '" size="40" />';
+    echo '</p>';
+    echo '<p>';
     echo 'Commercial';
     echo '<input type="radio" name="cf-com">' . ( isset( $_POST["cf-com"] ) ? esc_attr( $_POST["cf-com"] ) : '' ) . '" size="40" />';
 	echo '</p>';
