@@ -12,8 +12,8 @@ label, input, select {
 }
 label {
     float: left;
-    width: 10em;
-    text-align: right;
+    width: 5em;
+    text-align: left;
 }
 input, select {
     width: 15em;
@@ -47,4 +47,9 @@ br {
 }
 #buttons input {
 	width: 10em;
+    padding-top: 10px;
+}
+
+#submit {
+    padding-right: 5px;
 }
