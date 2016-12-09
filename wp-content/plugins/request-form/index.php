@@ -6,49 +6,47 @@ Plugin Name: Example Contact Form Plugin
 function html_form_code() {
 	echo '<form action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
     echo '<fieldset>';
-	echo '<label for="cf-name">Name</label>';
-	echo '<input type="text" name="cf-name" required" value="' . ( isset( $_POST["cf-name"] ) ? esc_attr( $_POST["cf-name"] ) : '' ) . '" size="40" />';
+	echo '<label for="firstName">First Name</label>';
+	echo '<input type="text" name="firstName" required" value="' . ( isset( $_POST["firstName"] ) ? esc_attr( $_POST["firstName"] ) : '' ) . '" size="40" />';
+    echo '<label for="lastName">Last Name</label>';
+	echo '<input type="text" name="lastName" required" value="' . ( isset( $_POST["lastName"] ) ? esc_attr( $_POST["lastName"] ) : '' ) . '" size="40" />';
+    echo '</fieldset>';
+    echo '<fieldset>';
     echo '<label for="cf-street">Street</label>';
-	echo '<input type="text" name="cf-street" value="' . ( isset( $_POST["cf-street"] ) ? esc_attr( $_POST["cf-street"] ) : '' ) . '" size="40" />';
+	echo '<input type="text" name="cf-street" value="' . ( isset( $_POST["cf-street"] ) ? esc_attr( $_POST["cf-street"] ) : '' ) . '" size="80" />';
 	echo '</fieldset>';
-    echo '<p>';
-	echo 'City <br/>';
+    echo '<fieldset>';
+	echo '<label for="cf-city">City</label>'
 	echo '<input type="text" name="cf-city" value="' . ( isset( $_POST["cf-city"] ) ? esc_attr( $_POST["cf-city"] ) : '' ) . '" size="40" />';
-	echo '</p>';
-    echo '<p>';
-	echo 'Postal Code <br/>';
+	echo '<label for="cf-city">Postal Code</label>'
 	echo '<input type="text" name="cf-postal" value="' . ( isset( $_POST["cf-postal"] ) ? esc_attr( $_POST["cf-postal"] ) : '' ) . '" size="40" />';
-	echo '</p>';
-    echo '<p>';
-	echo 'Phone Number <br/>';
+	echo '</fieldset>';
+    echo '<fieldset>';
+	echo '<label for="cf-number">Phone Number</label>';
 	echo '<input type="text" name="cf-number" value="' . ( isset( $_POST["cf-number"] ) ? esc_attr( $_POST["cf-number"] ) : '' ) . '" size="40" />';
-	echo '</p>';
-	echo '<p>';
-	echo 'E-mail <br/>';
-	echo '<input type="e-mail" name="cf-subject" pattern="[a-zA-Z ]+" value="' . ( isset( $_POST["cf-email"] ) ? esc_attr( $_POST["cf-email"] ) : '' ) . '" size="40" />';
-	echo '</p>';
-	echo '<p>';
-	echo 'Type of Property <br/>';
-    echo '</p>';
-    echo '<p>';
-    echo '  Residential';
-	echo '<input type="radio" name="cf-res">' . ( isset( $_POST["cf-res"] ) ? esc_attr( $_POST["cf-res"] ) : '' );
-    echo '</p>';
-    echo '<p>';
-    echo '  Commercial';
-    echo '<input type="radio" name="cf-com">' . ( isset( $_POST["cf-com"] ) ? esc_attr( $_POST["cf-com"] ) : '' );
-	echo '</p>';
-    echo '<p>';
-	echo 'Size of Property <br/>';
+	echo '/fielset>';
+	echo '<fieldset>';
+	echo '<label for="cf-email">E-mail</label>';
+	echo '<input type="e-mail" name="cf-email" pattern="[a-zA-Z ]+" value="' . ( isset( $_POST["cf-email"] ) ? esc_attr( $_POST["cf-email"] ) : '' ) . '" size="40" />';
+	echo '</fieldset>';
+	echo '<fieldset>';
+	echo '<legend>Type of Property</legend>';
+	echo '<input type="radio" name="cf-res" id="cf-res">' . ( isset( $_POST["cf-res"] ) ? esc_attr( $_POST["cf-res"] ) : '' );
+    echo '<label for="cf-res">Residential</label>';
+    echo '<input type="radio" name="cf-com" id="cf-com">' . ( isset( $_POST["cf-com"] ) ? esc_attr( $_POST["cf-com"] ) : '' );
+    echo '<label for="cf-res">Residential</label>';
+	echo '</fieldset>';
+    echo '<fieldset>';
+	echo '<label for="cf-property">Property Size</label>';
 	echo'<input type="text" name="cf-property">' . ( isset( $_POST["cf-property"] ) ? esc_attr( $_POST["cf-property"] ) : '' );
-	echo '</p>';
-    echo '<p>';
-	echo 'Service Required <br/>';
+	echo '</fieldset>';
+    echo '<fieldset>';
+	echo '<label for="cf-message">Service Required</label>';
 	echo '<textarea rows="10" cols="35" name="cf-message">' . ( isset( $_POST["cf-message"] ) ? esc_attr( $_POST["cf-message"] ) : '' ) . '</textarea>';
-	echo '</p>';
-	echo '<p><input type="submit" name="cf-submitted" value="Send"></p>';
-    echo'<p>';
-    echo '<input type="reset" id="reset" value="Reset Fields"><br></p>';
+	echo '</fieldset>';
+	echo '<fieldset>';'<input type="submit" name="cf-submitted" value="Send"></fielset>';
+    echo'<fieldset>';
+    echo '<input type="reset" id="reset" value="Reset Fields"></fieldset>';
 	echo '</<form>';
 }
 
@@ -58,7 +56,7 @@ function deliver_mail() {
 	if ( isset( $_POST['cf-submitted'] ) ) {
 
 		// sanitize form values
-		$name    = sanitize_text_field( $_POST["cf-name"] );
+		$name    = sanitize_text_field( $_POST["cf-firstName"] );
         $street    = sanitize_text_field( $_POST["cf-street"] );
         $city   = sanitize_text_field( $_POST["cf-city"] );
         $postal   = sanitize_text_field( $_POST["cf-postal"] );
