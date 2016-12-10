@@ -18,8 +18,8 @@ function html_form_code() {
 	echo '<label for="cf-city">City </label>';
 	echo '<input type="text" name="cf-city" value="' . ( isset( $_POST["cf-city"] ) ? esc_attr( $_POST["cf-city"] ) : '' ) . '" size="40" />';
 	echo '<label for="cf-city">  Postal Code </label>';
-	echo '<input type="text" name="cf-postal" value="' . ( isset( $_POST["cf-postal"] ) ? esc_attr( $_POST["cf-postal"] ) : '' ) . '" size="20" />';
-	echo '<br/></fieldset>';
+	echo '<input type="text" name="cf-postal" value="' . ( isset( $_POST["cf-postal"] ) ? esc_attr( $_POST["cf-postal"] ) : '' ) . '" size="20" /> <br/>';
+	echo '</fieldset>';
     echo '<fieldset>';
 	echo '<label for="cf-number">Phone Number </label>';
 	echo '<input type="text" name="cf-number" value="' . ( isset( $_POST["cf-number"] ) ? esc_attr( $_POST["cf-number"] ) : '' ) . '" size="20" />';
