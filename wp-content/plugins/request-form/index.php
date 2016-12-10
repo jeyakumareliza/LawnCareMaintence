@@ -74,7 +74,6 @@ function deliver_mail() {
 		$headers = "From: $name <$email>" . "\r\n";
 
 		// If email has been process for sending, display a success message
-		 wp_mail( $to, $message, $headers)
 			echo '<div>';
 			echo '<p>Thanks for contacting me, expect a response soon.</p>';
 			echo '</div>';
