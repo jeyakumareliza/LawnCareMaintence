@@ -14,6 +14,12 @@ label, input, select {
     margin-bottom: 15px;
     margin-top:15px;
 }
+input{
+      margin-left: 1px;
+    margin-right: 3px;
+    margin-bottom: 15px;
+    margin-top:15px;
+}
 label {
     width: 5em;
     text-align: left;

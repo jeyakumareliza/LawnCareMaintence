@@ -37,7 +37,7 @@ function html_form_code() {
 	echo '</fieldset>';
     echo '<fieldset>';
 	echo '<label for="cf-property">Property Size </label>';
-	echo'<input type="text" name="cf-property">' . ( isset( $_POST["cf-property"] ) ? esc_attr( $_POST["cf-property"] ) : '' ) . '" size="30" />';
+	echo'<input type="text" name="cf-property">' . ( isset( $_POST["cf-property"] ) ? esc_attr( $_POST["cf-property"] ) : '' );
 	echo '</fieldset>';
     echo '<fieldset>';
 
