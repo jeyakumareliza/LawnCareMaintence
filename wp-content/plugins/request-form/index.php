@@ -50,7 +50,7 @@ function html_form_code() {
 	echo '</<form>';
 }
 
-function deliver_mail() {
+/*function deliver_mail() {
 
 	// if the submit button is clicked, send the email
 	if ( isset( $_POST['cf-submitted'] ) ) {
@@ -77,11 +77,10 @@ function deliver_mail() {
 			echo '<div>';
 			echo '<p>Thanks for contacting me, expect a response soon.</p>';
 			echo '</div>';
-}
+}}*/
 
 function cf_shortcode() {
 	ob_start();
-	deliver_mail();
 	html_form_code();
 
 	return ob_get_clean();
